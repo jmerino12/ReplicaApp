@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Reto2 Jonathan</string>
+    <string name="logo">Logo</string>
+    <string name="news">News</string>
+    <string name="welcome_to_the_all_news">Welcome to the all-news</string>
+    <string name="sing_in">Sing in</string>
+    <string name="google"><b>Google</b> News</string>
+</resources>
