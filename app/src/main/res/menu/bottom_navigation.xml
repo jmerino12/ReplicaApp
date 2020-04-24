@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_me"
+        android:icon="@drawable/ic_user"
+        android:orderInCategory="10"
+        android:title="For You" />
+
+    <item
+        android:id="@+id/nav_headlines"
+        android:orderInCategory="20"
+        android:icon="@drawable/ic_world"
+        android:title="Headlines" />
+    <item
+        android:id="@+id/nav_fav"
+        android:icon="@drawable/ic_fav"
+        android:orderInCategory="30"
+        android:title="Favourites" />
+    <item
+        android:id="@+id/nav_newsstand"
+        android:icon="@drawable/ic_book"
+        android:orderInCategory="40"
+        android:title="Newsstand" />
+</menu>
