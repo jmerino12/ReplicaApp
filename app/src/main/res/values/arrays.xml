@@ -1,0 +1,34 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="lenguaje_deApp">
+        <item>Default</item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>German</item>
+        <item>Italian</item>
+        <item>Chinese</item>
+        <item>Portuguese</item>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+    <string-array name="playvideos">
+        <item>Enable</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="textSize">
+        <item>Same as System</item>
+        <item>Big</item>
+        <item>Medium</item>
+        <item>Small</item>
+    </string-array>
+    <string-array name="activyty">
+        <item>Singed in as jmerino1204@gmail.com</item>
+        <item>*******</item>
+        <item>****</item>
+        <item>*****</item>
+    </string-array>
+</resources>

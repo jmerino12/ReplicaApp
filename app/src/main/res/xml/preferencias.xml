@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General">
+        <ListPreference
+            android:key="lenguaje"
+            android:title="Lenguage &amp; Region"
+            android:summary="Select the lenguage"
+            android:entries="@array/lenguaje_deApp"
+            android:entryValues="@array/lenguaje_deApp"/>
+        <ListPreference
+            android:key="temperature"
+            android:title="Temperature Units"
+            android:summary="Celsius"
+            android:entries="@array/temperature"
+            android:entryValues="@array/temperature">
+        </ListPreference>
+        <ListPreference
+            android:key="video"
+            android:title="Auto-play videos"
+            android:summary="Enable"
+            android:entries="@array/playvideos"
+            android:entryValues="@array/playvideos">
+        </ListPreference>
+        <ListPreference
+            android:key="size"
+            android:title="Article text size"
+            android:summary="Same as System"
+            android:entries="@array/textSize"
+            android:entryValues="@array/textSize">
+        </ListPreference>
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:title="Google app Settings" />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:title="Notifications" />
+    </PreferenceCategory>
+    <ListPreference
+        android:key="activity"
+        android:title="My Activity"
+        android:summary="Signed in as jmerino1204@gmail.com"
+        android:entries="@array/activyty"
+        android:entryValues="@array/activyty">
+    </ListPreference>
+
+
+</PreferenceScreen>
