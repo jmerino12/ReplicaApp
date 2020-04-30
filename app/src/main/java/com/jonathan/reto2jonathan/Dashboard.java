@@ -21,7 +21,6 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-        //I added this if statement to keep the selected fragment when rotating the device
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new ForYou()).commit();
@@ -32,7 +31,6 @@ public class Dashboard extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
-
             switch (item.getItemId()) {
                 case R.id.nav_me:
                     selectedFragment = new ForYou();

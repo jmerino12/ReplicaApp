@@ -21,4 +21,7 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="logodescription">Logo de la app</string>
+    <string name="parcial_2">Parcial 2</string>
+    <string name="nombre">Jonathan Meriño Bolivar</string>
 </resources>
