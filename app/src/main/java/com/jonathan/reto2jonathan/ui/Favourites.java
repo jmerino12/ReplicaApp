@@ -26,12 +26,12 @@ public class Favourites extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialig();
+                showDialogo();
             }
         });
         return view;
     }
-    private void showDialig(){
+    private void showDialogo(){
         new MaterialAlertDialogBuilder(getContext(),R.style.AlertDialogTheme)
                 .setTitle(R.string.titulo)
                 .setMessage(R.string.contenido).setNegativeButton(R.string.declinar, new DialogInterface.OnClickListener() {
