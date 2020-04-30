@@ -6,10 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.card.MaterialCardView;
 import com.jonathan.reto2jonathan.R;
 import com.jonathan.reto2jonathan.model.Category;
 
@@ -34,9 +37,20 @@ public class RecyclerViewAdapater extends RecyclerView.Adapter<RecyclerViewAdapa
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.img_category.setImageResource(mData.get(position).getImg());
         holder.txt_category.setText(mData.get(position).getName());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayToast("Ha seleccionado: "+mData.get(position).getName());
+            }
+        });
+
+    }
+    public void displayToast(String message) {
+        Toast.makeText(mContext, message,
+                Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -45,6 +59,7 @@ public class RecyclerViewAdapater extends RecyclerView.Adapter<RecyclerViewAdapa
     }
 
     public static class  MyViewHolder extends RecyclerView.ViewHolder{
+        CardView cardView;
         TextView txt_category;
         ImageView img_category;
 
@@ -52,6 +67,8 @@ public class RecyclerViewAdapater extends RecyclerView.Adapter<RecyclerViewAdapa
             super(itemView);
             txt_category = (TextView) itemView.findViewById(R.id.category_name);
             img_category = (ImageView) itemView.findViewById(R.id.category_img);
+            cardView = itemView.findViewById(R.id.cardView_id);
         }
     }
+
 }

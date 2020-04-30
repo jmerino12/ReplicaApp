@@ -1,5 +1,6 @@
 package com.jonathan.reto2jonathan.ui;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,7 @@ import java.util.List;
 
 public class NewsStand extends Fragment {
     List<Category> categoryList;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -38,7 +40,12 @@ public class NewsStand extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
         RecyclerViewAdapater adapater = new RecyclerViewAdapater(getContext(),categoryList);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
+        } else {
+            recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        }
         recyclerView.setAdapter(adapater);
         return view;
     }
@@ -48,4 +55,5 @@ public class NewsStand extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
+
 }

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView google;
@@ -18,6 +19,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Dashboard(View view) {
+        displayToast("Ha seleccionado el boton ingreso");
         startActivity(new Intent(MainActivity.this,Dashboard.class));
+
+    }
+    public void displayToast(String message) {
+        Toast.makeText(MainActivity.this, message,
+                Toast.LENGTH_SHORT).show();
     }
 }

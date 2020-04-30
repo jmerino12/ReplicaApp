@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.jonathan.reto2jonathan.ui.Favourites;
@@ -34,15 +35,19 @@ public class Dashboard extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.nav_me:
                     selectedFragment = new ForYou();
+                    displayToast("Menu For You");
                     break;
                 case R.id.nav_headlines:
                     selectedFragment = new HeadLines();
+                    displayToast("Menu HeadLines");
                     break;
                 case R.id.nav_fav:
                     selectedFragment = new Favourites();
+                    displayToast("Menu Favourites");
                     break;
                 case R.id.nav_newsstand:
                     selectedFragment = new NewsStand();
+                    displayToast("Menu Newsstand");
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -50,4 +55,8 @@ public class Dashboard extends AppCompatActivity {
             return true;
         }
     };
+    public void displayToast(String message) {
+        Toast.makeText(getApplicationContext(), message,
+                Toast.LENGTH_SHORT).show();
+    }
 }

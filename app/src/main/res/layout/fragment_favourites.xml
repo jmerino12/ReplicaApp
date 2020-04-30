@@ -5,13 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView5"
+    <Button
+        android:id="@+id/btnDialogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fragment Favourites"
+        android:text="Abrir Dialogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:icon="@drawable/ic_world"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
